@@ -40,13 +40,13 @@ function Sidebar() {
                 <GiTie className="w-6 h-6"/>Download Resume
             </a>
             <div className='flex justify-around w-9/12 my-5 text-green md:w-full'>
-                <a href="">
+                <a href="" aria-label='Youtube'>
                     <AiFillYoutube className="w-8 h-8 cursor-pointer"/>
                 </a>
-                <a href="">
+                <a href="" aria-label='Github'>
                     <AiFillGithub className="w-8 h-8 ursor-pointer"/>
                 </a>
-                <a href="">
+                <a href="" aria-label='Linkedin'>
                     <AiFillLinkedin className="w-8 h-8 ursor-pointer"/>
                 </a>
             </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
-import { useState } from "react"
+import Head from "next/head"
+import React, { useState } from "react"
 import { fadeInUp, routerAnimation, stagger } from "../animations"
 import ProjectCard from "../components/ProjectCard"
 import ProjectNavbar from "../components/ProjectNavbar"
@@ -24,9 +25,10 @@ const Projects = () => {
 
     return (
         <motion.div className="px-5 py-2 overflow-y-scroll" style={{height:'65vh'}} variants={routerAnimation} initial='initial' animate='animate' exit='exit'>
-            <nav>
-                <ProjectNavbar handleFilterCategory={handleFilterCategory} active={active}/>
-            </nav>
+            <Head>
+                <title>Web Developer | projects | Aaron</title>
+            </Head>
+            <ProjectNavbar handleFilterCategory={handleFilterCategory} active={active}/>
             <motion.div className='relative grid grid-cols-12 gap-4 my-3' variants={stagger}>
                 {
                     projects.map((project) => (

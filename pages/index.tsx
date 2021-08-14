@@ -1,20 +1,22 @@
 // import { GetServerSidePropsContext, GetStaticPropsContext } from "next"
 import { motion } from "framer-motion"
-import { GetServerSidePropsContext } from "next"
-import process from "process"
 import { fadeInUp, routerAnimation, stagger } from "../animations"
 import ServiceCard from "../components/ServiceCard"
 import { services } from "../data"
+import Head  from "next/head"
 
 const index = () => {
   return (
     <motion.div className='flex flex-col flex-grow px-6 pt-1' variants={routerAnimation} initial='initial' animate='animate' exit='exit'>
-      <h5 className='my-3 text-base font-medium'>
+      <Head>
+        <title>Web Developer | porfolio | Aaron</title>
+      </Head>
+      <h6 className='my-3 text-base font-medium'>
         I am currently pursuing B.Tech Degree(Final Year) in Computer Science
         Engineering from Academy of Technology. I have 3+ years of experience in
         Web Development and I have a Youtube Channel where I teach Full Stack
         Web Development
-      </h5>
+      </h6>
       <div className='flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100' style={{marginLeft:'-1.5rem', marginRight:'-1.5rem'}}>
         <h6 className='my-3 text-xl font-bold tracking-wide'>What I am doing</h6>
         <motion.div className='grid gap-6 my-3 lg:grid-cols-2' variants={stagger}>
@@ -46,15 +48,15 @@ export default index
 //   }
 // }
 
-export const getServerSideProps = async(context:GetServerSidePropsContext) => {
+// export const getServerSideProps = async(context:GetServerSidePropsContext) => {
 
-  // const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
-  // const data = await res.json();  
+//   // const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
+//   // const data = await res.json();  
 
-  return {
-    props: {
-      // services: data.services,
-      endpoint: process.env.VERCEL_URL, 
-    }
-  }
-}
+//   return {
+//     props: {
+//       // services: data.services,
+//       endpoint: process.env.VERCEL_URL, 
+//     }
+//   }
+// }
